@@ -1,16 +1,15 @@
 {
-  "devDependencies": {
-    "autoprefixer": "^10.5.0",
-    "postcss": "^8.5.15",
-    "tailwindcss": "^4.3.0"
+  "name": "speech-to-text-web-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Full-stack speech-to-text web application with React, Express, OpenAI Whisper, and Supabase.",
+  "scripts": {
+    "install:all": "npm install --prefix server && npm install --prefix client",
+    "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "start": "npm run start --prefix server",
+    "build": "npm run build --prefix client"
   },
-  "dependencies": {
-    "@supabase/supabase-js": "^2.106.2",
-    "cors": "^2.8.6",
-    "dotenv": "^17.4.2",
-    "express": "^5.2.1",
-    "multer": "^2.1.1",
-    "nodemon": "^3.1.14",
-    "openai": "^6.39.1"
+  "devDependencies": {
+    "concurrently": "^9.1.2"
   }
 }
